@@ -1,0 +1,36 @@
+[
+  {
+    "code": "HVD435",
+    "sizes": {
+      "S": {
+        "price": 200,
+        "quantity": 100
+      },
+      "M": {
+        "price": 25,
+        "quantity": 50
+      },
+      "L": {
+        "price": 50,
+        "quantity": 60
+      }
+    }
+  },
+  {
+    "code": "47645YT",
+    "sizes": {
+      "S": {
+        "price": 150,
+        "quantity": 800
+      },
+      "M": {
+        "price": 20,
+        "quantity": 60
+      },
+      "L": {
+        "price": 25,
+        "quantity": 40
+      }
+    }
+  }
+]

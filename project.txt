@@ -1,0 +1,91 @@
+This project has 4 API
+-> data is stored in src/controllers/data.json
+
+1. first API to updateStockAndPrice
+api - localhost:3000/api/v1/update-stock/${apparaleType}/${apparelSize}, method: PUT
+
+This API is used to pass apparsel type,  size in url and price, quantity in body to update price and quantity
+e.x
+
+{
+    "price":50,
+    "quantity":60
+}
+
+2. 2nd API to updateMultipleStocks
+api - localhost:3000/api/v1/update-stocks
+
+This API is used to update multiple data together
+e.x
+
+[
+    {
+    "code": "apparel1",
+    "size": "S",
+    "price": 200,
+    "quantity": 100
+    },
+   {
+    "code": "apparel2",
+    "size": "S",
+    "price": 150,
+    "quantity": 800
+    }
+]
+
+3. 3rd api is used to check if orders can be fullfilled or not
+api - localhost:3000/api/v1/check-order
+e.x
+input data = 
+[
+    {
+    "code": "apparel1",
+    "size": "S",
+    "price": 200,
+    "quantity": 200
+    },
+   {
+    "code": "apparel2",
+    "size": "S",
+    "price": 150,
+    "quantity": 800
+    }
+]
+
+output/response
+{
+    "status": true,
+    "data": [
+        {
+            "code": "apparel2",
+            "size": "S",
+            "quantity": 800,
+            "msg": "Can ful fill the order"
+        }
+    ]
+}
+
+4. 4th api calculates the lowest price of my oreders
+api - localhost:3000/api/v1/check-cost
+ex. 
+[
+    {
+    "code": "apparel1",
+    "size": "S",
+    "price": 200,
+    "quantity": 200
+    },
+   {
+    "code": "apparel2",
+    "size": "S",
+    "price": 150,
+    "quantity": 800
+    }
+]
+
+
+output - 
+{
+    "status": true,
+    "totalCost": 120000
+}
